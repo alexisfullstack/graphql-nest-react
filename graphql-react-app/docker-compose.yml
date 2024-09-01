@@ -1,0 +1,13 @@
+version: '3.9' 
+
+services:
+  app:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    container_name: graphql-react-app
+    ports:
+      - '3001:3000'
+    volumes:
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
